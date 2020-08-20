@@ -28,7 +28,7 @@ function App(props) {
   }, []);
   
   // LOADER
-  // FAVORITES / REDUX
+  // FAVORITES / ADD / REMOVE / REDUX
   // PAGINATION
   // HOOKS
   // FOOD COMBINATIONS
