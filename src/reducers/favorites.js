@@ -1,4 +1,5 @@
 // IMMUTABILITY HELPER
+import { update } from 'immutability-helper'
 
 const initialState = {
   list: []

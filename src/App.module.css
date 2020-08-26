@@ -1,5 +1,9 @@
 .App {
+	box-sizing: border-box;
 	background-color: #fcaf67;
+	min-height: 100vh;
+	max-width: 100%;
+	padding-top: 98px;
 }
 
 .pageGrid {

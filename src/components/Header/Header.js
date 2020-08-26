@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css'
 
 class Header extends Component {
 
     render() {
       return (
-       <nav>
-         <a href="/">
-           LOGO
-         </a>
-          <ul>
-            <li>My favorites</li>
-            <li>About Beer</li>
-          </ul>
+       <nav className={styles.pageNav}>
+         <div className={styles.navFlex}>
+          <Link to="/">
+            LOGO
+          </Link>
+            <ul className={styles.navLinks}>
+              <Link style={{ textDecoration: 'none' }} to="/favorites">
+                <li>My favorites</li>
+              </Link>
+              <Link style={{ textDecoration: 'none' }} to="/about">
+                <li>About Beer</li>
+              </Link>  
+            </ul>
+          </div>
        </nav>
        
       );

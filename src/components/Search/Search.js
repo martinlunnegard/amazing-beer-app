@@ -14,7 +14,6 @@ class Search extends Component {
     render() {
       return (
 			<div className={styles.container}>
-				<h1 className={styles.header}>The Amazing Beer App</h1>
 				<form className="beer-search-form" onSubmit={this.handleSubmit}> 
 						<input 
 							type="text" 
