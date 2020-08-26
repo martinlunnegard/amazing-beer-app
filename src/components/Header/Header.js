@@ -16,7 +16,7 @@ class Header extends Component {
                 <li>My favorites</li>
               </Link>
               <Link style={{ textDecoration: 'none' }} to="/about">
-                <li>About Beer</li>
+                <li>About</li>
               </Link>  
             </ul>
           </div>
