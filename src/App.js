@@ -20,7 +20,6 @@ function App(props) {
             <Route path="/about" component={About} />
           </Switch>
         </div>
-        <Footer />
       </div>
     </Router>
     )

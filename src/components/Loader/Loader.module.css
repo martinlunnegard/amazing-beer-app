@@ -1,0 +1,19 @@
+.loaderContainer {
+  position: fixed; 
+  z-index: 3; 
+  height: 100%; 
+  width: 100%; 
+  background-color: rgba(0, 0, 0, 0.7); 
+  top: 0; 
+  left: 0; 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loaderText {
+  font-size: 36px; 
+  font-weight: bold;
+  color: #ffffff; 
+}

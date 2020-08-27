@@ -1,35 +1,36 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import styles from './Search.module.css'
 
-class Search extends Component {
-  myInput = React.createRef(); 
+const Search = props => {
+  const [searchTerm, setSearchTerm] = useState('');
 
-  handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault(); 
-    const searchTerm = this.myInput.current.value; 
-    this.props.performSearch(searchTerm); 
+    props.performSearch(searchTerm); 
     e.currentTarget.reset(); 
   }
 
-    render() {
-      return (
-			<div className={styles.container}>
-				<form className="beer-search-form" onSubmit={this.handleSubmit}> 
-						<input 
-							type="text" 
-							className="search-input" 
-							ref={this.myInput}
-						/>
-						<button type="submit" className="submit-btn">
-							Find my beer
-						</button>
-				</form>
-			 </div>
-      );
-  
-    }
-   
+    return (
+    <div className={styles.container}>
+      <form className="beer-search-form" onSubmit={handleSubmit}> 
+        <input 
+          type="text" 
+          className="search-input" 
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <button 
+          type="submit" 
+          className="submit-btn"
+        >
+          Find my beer
+        </button>
+      </form>
+      </div>
+    );
+
   }
+   
+
   
   export default Search;
   
