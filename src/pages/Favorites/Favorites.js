@@ -10,7 +10,6 @@ const Favorites = () => {
   const removeItem = (obj) => {
     console.log('Remove item', obj); 
     dispatch({ type: 'REMOVE_FAVORITE', payload: obj });
-
   }
 
 

@@ -13,7 +13,6 @@ const Home = props => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   
-
   useEffect(() => {
     async function fetchData() {
       const res = await fetch(`${API_URL}/beers`);
@@ -29,11 +28,7 @@ const Home = props => {
   // TODOS
 
   // LOADER
-  // FAVORITES / ADD / REMOVE / REDUX
   // PAGINATION
-  // HOOKS
-  // FOOD COMBINATIONS
-  // FILTER
 
  const handleSearch = async (searchTerm) => {
     setIsLoaded(false);
