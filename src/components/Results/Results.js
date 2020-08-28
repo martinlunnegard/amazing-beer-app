@@ -24,12 +24,14 @@ function Results({ results }) {
             <div className={styles.beerName}>{ results[key].name }</div>
             <p className={styles.beerTagline}>{ results[key].tagline }</p>
             <p className={styles.beerDescription}>{ results[key].description }</p>
-            <button onClick={() => handleClick(results[key].name)}>Add to favorites</button>
-            <button onClick={(e) => showFoodPair(e) }>Show food pairing</button>
-            <ul>
-              { showFood &&
+            <button className={styles.favoriteBtn} onClick={() => handleClick(results[key])}>Add to favorites</button>
+            <button onClick={() => showFoodPair() }>Show food pairing</button>
+            <ul className={styles.foodPairingList}>
+              { 
               results[key].food_pairing.map((food, i) => {
-                return <li key={i} >{food}</li>
+                return (
+                  <li key={i}>{food}</li>
+                 ) 
                 }) 
               }
             </ul>

@@ -1,0 +1,51 @@
+.favoritesHeader {
+  font-family: 'Luckiest Guy', cursive;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+  color: #ffffff;
+  font-size: 44px;
+}
+
+.favoritesRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px 30px;
+  margin-bottom: 20px; 
+  margin-right: 60px;
+}
+
+.favoritesInnerRow {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+
+.favoritesNameAbv {
+  display: flex;
+}
+
+.favoritesName,
+.favoritesAbv {
+  font-family: 'Luckiest Guy', cursive;
+  color: #009CCD;
+  font-weight: bold;
+  font-size: 44px; 
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+}
+
+.favoritesImgWrapper {
+  width: 100px; 
+  text-align: center;
+}
+
+.favoritesImg {
+  max-height: 200px;
+}

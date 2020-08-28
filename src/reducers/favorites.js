@@ -12,7 +12,7 @@ const favoritesReducer = (state = initialState, action) => {
     console.log('ADD FAVORITE', payload);
       return {
         ...state,
-        list: state.list.concat(payload)
+        list: [...state.list, payload]
       } 
 
     default:

@@ -12,18 +12,19 @@ const Home = props => {
   const [errors, setErrors] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  async function fetchData() {
-    const res = await fetch(`${API_URL}/beers`);
-    const beers = await res.json();
-    if (beers) {
-      dispatch({ type: 'ON_LOAD', payload: beers });
-      setIsLoaded(true);
-    }
-  }
+  
 
   useEffect(() => {
+    async function fetchData() {
+      const res = await fetch(`${API_URL}/beers`);
+      const beers = await res.json();
+      if (beers) {
+        dispatch({ type: 'ON_LOAD', payload: beers });
+        setIsLoaded(true);
+      }
+    }
     fetchData();
-  }, []);
+  }, [dispatch]);
   
   // TODOS
 
