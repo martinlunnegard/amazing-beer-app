@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import mockImg from '../../assets/mock.png'
 import styles from './Favorites.module.css';
 
 const Favorites = () => {
@@ -8,10 +7,8 @@ const Favorites = () => {
   const dispatch = useDispatch();
 
   const removeItem = (obj) => {
-    console.log('Remove item', obj); 
     dispatch({ type: 'REMOVE_FAVORITE', payload: obj });
   }
-
 
   const renderFavorites = (data) => {
     console.log(data, 'DATA FAVORITES'); 
@@ -22,8 +19,14 @@ const Favorites = () => {
         <div key={data[key].id} className={styles.favoritesRow}>
           <div className={styles.favoritesInnerRow}>
             <div className={styles.favoritesNameAbv}>
-              <div className={styles.favoritesName}>{data[key].name}</div>
-              <div className={styles.favoritesAbv}>{data[key].abv}%</div>
+              <div>
+                <div className={styles.favoritesName}>{data[key].name}</div>
+                <div className={styles.favoritesBrewTips}>
+                  <div><strong>Brewer's tips:</strong></div>
+                  <div>"{data[key].brewers_tips}"</div>
+                </div>
+              </div>
+              <div className={styles.favoritesAbv}>Vol: {data[key].abv}%</div>
             </div>
             <div className={styles.favoritesImgWrapper}>
               <img className={styles.favoritesImg} src={data[key].image_url} alt={data[key].name} />
@@ -37,7 +40,7 @@ const Favorites = () => {
 
   return (
     <div>
-      <h2 className={styles.favoritesHeader}>My Favorites</h2>
+      <h2 className={styles.favoritesHeader}>My Favorites:</h2>
       { renderFavorites(favorites) }
     </div>
   );
