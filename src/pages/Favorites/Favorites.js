@@ -5,9 +5,12 @@ import styles from './Favorites.module.css';
 
 const Favorites = () => {
   const favorites = useSelector(state => state.favorites.list);
+  const dispatch = useDispatch();
 
-  const removeItem = () => {
-    console.log('Remove item'); 
+  const removeItem = (obj) => {
+    console.log('Remove item', obj); 
+    dispatch({ type: 'REMOVE_FAVORITE', payload: obj });
+
   }
 
 
@@ -27,7 +30,7 @@ const Favorites = () => {
               <img className={styles.favoritesImg} src={data[key].image_url} alt={data[key].name} />
             </div>
           </div>  
-          <button className={styles.removeBtn} onClick={removeItem}>Remove</button>
+          <button className={styles.removeBtn} onClick={() => removeItem(data[key])}>Remove</button>
         </div>  
       )
     );
@@ -37,18 +40,6 @@ const Favorites = () => {
     <div>
       <h2 className={styles.favoritesHeader}>My Favorites</h2>
       { renderFavorites(favorites) }
-      <div className={styles.favoritesRow}>
-          <div className={styles.favoritesInnerRow}>
-            <div className={styles.favoritesNameAbv}>
-              <div className={styles.favoritesName}>Name</div>
-              <div className={styles.favoritesAbv}>6.66 %</div>
-            </div>
-            <div className={styles.favoritesImgWrapper}>
-              <img className={styles.favoritesImg} src={mockImg} alt='mock' />
-            </div>
-          </div>  
-          <button className={styles.removeBtn} onClick={removeItem}>Remove</button>
-        </div>  
     </div>
   );
 }

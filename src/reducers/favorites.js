@@ -1,6 +1,3 @@
-// IMMUTABILITY HELPER
-import { update } from 'immutability-helper'
-
 const initialState = {
   list: []
 }
@@ -14,6 +11,11 @@ const favoritesReducer = (state = initialState, action) => {
         ...state,
         list: [...state.list, payload]
       } 
+    case 'REMOVE_FAVORITE':
+    return {
+      ...state,
+      list: [...state.list.filter(item => item.id !== payload.id)]
+    }  
 
     default:
       return state
