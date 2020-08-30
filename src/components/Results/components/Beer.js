@@ -1,5 +1,6 @@
 import React, { useState} from 'react';
 import { useDispatch } from 'react-redux';
+import { favoritesActions } from  '../../../redux/actions'
 import styles from './Beer.module.css';
 
 const Beer = ({ beer }) => {
@@ -8,7 +9,7 @@ const Beer = ({ beer }) => {
  
 
   const addToFavorites = (obj) => {
-    dispatch({ type: 'ADD_FAVORITE', payload: obj }); 
+    dispatch(favoritesActions.addFavorite(obj)); 
   }
 
   const showFoodPair = (e) => {

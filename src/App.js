@@ -4,7 +4,6 @@ import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import Favorites from './pages/Favorites/Favorites';
 import About from './pages/About/About';
-import Footer from './components/Footer/Footer'; 
 import styles from './App.module.css'
 
 function App(props) {

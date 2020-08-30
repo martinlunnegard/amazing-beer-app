@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useReducer } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { resultsActions } from '../../redux/actions'
 import Search from '../../components/Search/Search';
 import Results from '../../components/Results/Results'; 
 import Loader from '../../components/Loader/Loader'; 
@@ -18,7 +19,7 @@ const Home = props => {
       const res = await fetch(`${API_URL}/beers`);
       const beers = await res.json();
       if (beers) {
-        dispatch({ type: 'ON_LOAD', payload: beers });
+        dispatch(resultsActions.onLoad(beers));
         setIsLoaded(true);
       }
     }
@@ -41,7 +42,7 @@ const Home = props => {
     const res = await fetch(`${API_URL}/beers?beer_name=${searchTerm}`);
     const beers = await res.json();
       if (beers) {
-        dispatch({ type: 'ON_LOAD', payload: beers });
+        dispatch(resultsActions.onLoad(beers));
         setIsLoaded(true);
       }
   }
