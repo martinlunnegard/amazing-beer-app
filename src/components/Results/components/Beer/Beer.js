@@ -1,13 +1,12 @@
 import React, { useState} from 'react';
 import { useDispatch } from 'react-redux';
-import { favoritesActions } from  '../../../redux/actions'
+import { favoritesActions } from  '../../../../redux/actions'
 import styles from './Beer.module.css';
 
 const Beer = ({ beer }) => {
   const [showFood, setShowFood] = useState(false);
   const dispatch = useDispatch();
  
-
   const addToFavorites = (obj) => {
     dispatch(favoritesActions.addFavorite(obj)); 
   }
@@ -17,6 +16,7 @@ const Beer = ({ beer }) => {
   }
 
   if(!beer) return
+
   return (
     <div className={styles.beerContainer} key={beer.id}> 
       <div className={styles.beerInfoContainer}>
