@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { favoritesActions } from  '../../redux/actions'
 import styles from './Favorites.module.css';
 
 const Favorites = () => {
@@ -7,11 +8,10 @@ const Favorites = () => {
   const dispatch = useDispatch();
 
   const removeItem = (obj) => {
-    dispatch({ type: 'REMOVE_FAVORITE', payload: obj });
+    dispatch(favoritesActions.removeFavorite(obj));
   }
 
   const renderFavorites = (data) => {
-    console.log(data, 'DATA FAVORITES'); 
     if(!data) return 
 
     return (

@@ -10,7 +10,7 @@ const Pagination = ({ itemsPerPage, totalItems, paginate }) => {
   
   return (
     <nav>
-      <ul className={styles.Pagination}>
+      <ul className={styles.pagination}>
         {pageNumbers.map(number => (
           <li key={number} className={styles.pageItem}>
             <button onClick={() => paginate(number)} className={styles.pageLink}>

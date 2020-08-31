@@ -5,9 +5,12 @@ import styles from './Beer.module.css';
 
 const Beer = ({ beer }) => {
   const [showFood, setShowFood] = useState(false);
+  const [favorite, setFavorite] = useState(false); 
   const dispatch = useDispatch();
  
-  const addToFavorites = (obj) => {
+  const addToFavorites = (e, obj) => {
+    e.preventDefault();
+    setFavorite(favorite => !favorite); 
     dispatch(favoritesActions.addFavorite(obj)); 
   }
 
@@ -23,7 +26,11 @@ const Beer = ({ beer }) => {
         <div className={styles.beerName}>{ beer.name }</div>
         <p className={styles.beerTagline}>{ beer.tagline }</p>
         <p className={styles.beerDescription}>{ beer.description }</p>
-        <button className={styles.favoriteBtn} onClick={() => addToFavorites(beer)}>Add to favorites</button>
+        <button 
+          className={favorite ? styles.favoriteBtnActive : styles.favoriteBtn} 
+          onClick={(e) => addToFavorites(e, beer)}>
+          Add to favorites
+        </button>
         <button onClick={() => showFoodPair() }>Show food pairings</button>
         <ul className={styles.foodPairingList}>
           { 

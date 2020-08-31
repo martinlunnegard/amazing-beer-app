@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useReducer } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { resultsActions } from '../../redux/actions'
 import Search from '../../components/Search/Search';
@@ -28,7 +28,6 @@ const Home = props => {
   
   // TODOS
 
-  // PAGINATION
   // DESIGNA KNAPPAR / INPUTFÄLT
   // HEADER HIDE ON SCROLL
   // ABOUT
