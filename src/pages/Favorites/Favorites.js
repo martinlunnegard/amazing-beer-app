@@ -32,7 +32,7 @@ const Favorites = () => {
               <img className={styles.favoritesImg} src={data[key].image_url} alt={data[key].name} />
             </div>
           </div>  
-          <button className={styles.removeBtn} onClick={() => removeItem(data[key])}>Remove</button>
+          <button className={styles.removeBtn} onClick={() => removeItem(data[key])}>X</button>
         </div>  
       )
     );

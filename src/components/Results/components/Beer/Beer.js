@@ -28,6 +28,7 @@ const Beer = ({ beer }) => {
         <p className={styles.beerDescription}>{ beer.description }</p>
         <button 
           className={favorite ? styles.favoriteBtnActive : styles.favoriteBtn} 
+          disabled={favorite}
           onClick={(e) => addToFavorites(e, beer)}>
           Add to favorites
         </button>
