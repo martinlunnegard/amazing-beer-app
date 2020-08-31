@@ -29,12 +29,10 @@ const Home = props => {
   // TODOS
 
   // DESIGNA KNAPPAR / INPUTFÄLT
-  // HEADER HIDE ON SCROLL
   // ABOUT
-  // LOGO
   // MOBIL 
   // ANIMATIONER
-  // LOADER
+
 
  const handleSearch = async (searchTerm) => {
     setIsLoaded(false);

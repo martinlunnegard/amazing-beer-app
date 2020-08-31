@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
-import styles from './Search.module.css'
+import React, { useState } from 'react';
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styles from './Search.module.css';
 
 const Search = props => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault(); 
+    if(!searchTerm) return
     props.performSearch(searchTerm); 
+    setSearchTerm('');
     e.currentTarget.reset(); 
   }
 
@@ -22,7 +26,7 @@ const Search = props => {
           type="submit" 
           className="submit-btn"
         >
-          Find my beer
+          <FontAwesomeIcon icon={faSearch} />
         </button>
       </form>
       </div>

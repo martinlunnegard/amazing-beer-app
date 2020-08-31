@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { faBeer } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from './Header.module.css'
 
 const Header = () => {
@@ -7,7 +9,7 @@ const Header = () => {
       <nav className={styles.pageNav}>
         <div className={styles.navFlex}>
         <Link to="/">
-          LOGO
+          <li className={styles.siteLogo}><FontAwesomeIcon icon={faBeer} /></li>
         </Link>
           <ul className={styles.navLinks}>
             <Link style={{ textDecoration: 'none' }} to="/favorites">

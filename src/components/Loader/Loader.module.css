@@ -9,7 +9,27 @@
   text-align: center;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+}
+
+.iconContainer {
+  margin: 0; 
+  padding: 0;
+  list-style-type: none;
+  font-size: 32px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.loaderContainer svg path {
+  color: #ffffff;
 }
 
 .loaderText {

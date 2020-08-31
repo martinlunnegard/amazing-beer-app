@@ -1,6 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { favoritesActions } from  '../../redux/actions'
+import { faSkullCrossbones } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from './Favorites.module.css';
 
 const Favorites = () => {
@@ -32,7 +34,9 @@ const Favorites = () => {
               <img className={styles.favoritesImg} src={data[key].image_url} alt={data[key].name} />
             </div>
           </div>  
-          <button className={styles.removeBtn} onClick={() => removeItem(data[key])}>X</button>
+          <button className={styles.btn} onClick={() => removeItem(data[key])}>
+            <FontAwesomeIcon icon={faSkullCrossbones} />
+          </button>
         </div>  
       )
     );

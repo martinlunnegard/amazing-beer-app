@@ -50,18 +50,28 @@
 	width: 100%;
 }
 
-.favoriteBtn {
-	margin-right: 10px;
-}
-
 .foodPairingList {
 	margin: 0; 
 	padding: 0; 
 	margin-top: 20px; 
 	margin-left: 20px;
+	transition: all ease-in 250ms;
+	visibility: hidden;
+	opacity: 0;
 }
 
-.foodPairingList li {
+.foodPairingListActive {
+	margin: 0; 
+	padding: 0; 
+	margin-top: 20px; 
+	margin-left: 20px;
+	transition: all ease-in 250ms;
+	visibility: visible;
+	opacity: 1;
+}
+
+.foodPairingList li,
+.foodPairingListActive li {
 	list-style-type: square;
 	margin-bottom: 5px;
 	font-family: 'Raleway', sans-serif;
@@ -70,22 +80,34 @@
 	font-size: 16px;
 }
 
-.favoriteBtn,
-.favoriteBtnActive {
+
+.btn,
+.btnActive {
 	background-color: #ffffff; 
 	color: #009CCD;
 	border: 2px solid #009CCD;
-	border-radius: 10px;
-	font-size: 14px; 
+	border-radius: 50%;
+	font-size: 16px; 
 	font-family: 'Raleway', sans-serif;
 	font-weight: bold;
-	padding: 10px 8px;
+	width: 40px;
+	height: 40px;
 	outline: none;
 	transition: all ease-in 200ms;
+	margin-right: 7.5px;
+	cursor: pointer;
 }
 
-.favoriteBtnActive {
+.btn svg,
+.btnActive svg {
+	position: relative; 
+	top: 1px;
+} 
+
+.btnActive {
 	background-color: #009CCD; 
 	color: #ffffff;
 }
+
+
 

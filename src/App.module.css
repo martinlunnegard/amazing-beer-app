@@ -3,7 +3,7 @@
 	background-color: #fcaf67;
 	min-height: 100vh;
 	max-width: 100%;
-	padding-top: 89px;
+	padding-top: 140px;
 	padding-bottom: 60px;
 }
 
@@ -11,4 +11,32 @@
 	max-width: 880px;
 	width: 100%;
 	margin: 0 auto;
+}
+
+:global .btn,
+:global .btnActive {
+	background-color: #ffffff; 
+	color: #009CCD;
+	border: 2px solid #009CCD;
+	border-radius: 50%;
+	font-size: 16px; 
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	width: 40px;
+	height: 40px;
+	outline: none;
+	transition: all ease-in 200ms;
+	margin-right: 7.5px;
+	cursor: pointer;
+}
+
+:global .btn svg,
+:global .btnActive svg {
+	position: relative; 
+	top: 1px;
+} 
+
+:global .btnActive {
+	background-color: #009CCD; 
+	color: #ffffff;
 }

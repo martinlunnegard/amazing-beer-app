@@ -1,6 +1,8 @@
 import React, { useState} from 'react';
 import { useDispatch } from 'react-redux';
 import { favoritesActions } from  '../../../../redux/actions'
+import { faHeart, faUtensils } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from './Beer.module.css';
 
 const Beer = ({ beer }) => {
@@ -27,13 +29,19 @@ const Beer = ({ beer }) => {
         <p className={styles.beerTagline}>{ beer.tagline }</p>
         <p className={styles.beerDescription}>{ beer.description }</p>
         <button 
-          className={favorite ? styles.favoriteBtnActive : styles.favoriteBtn} 
+          className={favorite ? styles.btnActive : styles.btn} 
           disabled={favorite}
           onClick={(e) => addToFavorites(e, beer)}>
-          Add to favorites
+          <FontAwesomeIcon icon={faHeart} />
         </button>
-        <button onClick={() => showFoodPair() }>Show food pairings</button>
-        <ul className={styles.foodPairingList}>
+        <button 
+          onClick={() => showFoodPair() }
+          className={showFood ? styles.btnActive : styles.btn} 
+        >
+          <FontAwesomeIcon icon={faUtensils} />
+        </button>
+        <ul 
+          className={showFood ? styles.foodPairingListActive : styles.foodPairingList}>
           { 
           beer.food_pairing.map((food, i) => {
             return (
