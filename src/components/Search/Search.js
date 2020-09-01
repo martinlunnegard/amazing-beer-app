@@ -21,6 +21,7 @@ const Search = props => {
           type="text" 
           className={styles.searchInput}
           onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder="Find me a beer..."
         />
         <button 
           type="submit" 
