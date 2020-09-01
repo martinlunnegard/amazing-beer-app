@@ -16,15 +16,15 @@ const Search = props => {
 
     return (
     <div className={styles.container}>
-      <form className="beer-search-form" onSubmit={handleSubmit}> 
+      <form className={styles.beerSearchForm} onSubmit={handleSubmit}> 
         <input 
           type="text" 
-          className="search-input" 
+          className={styles.searchInput}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <button 
           type="submit" 
-          className="submit-btn"
+          className={styles.submitBtn}
         >
           <FontAwesomeIcon icon={faSearch} />
         </button>
