@@ -76,3 +76,10 @@
 	font-size: 16px;
 }
 
+.noResults {
+	color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+}
+

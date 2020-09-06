@@ -84,11 +84,18 @@
   cursor: pointer;
   outline: none; 
   border-radius: 50%;
-  transition: all ease-in 200ms;
+  transition: all ease-in 250ms;
 }
 
 .removeBtn:hover {
   background-color: #009CCD;
   color: #ffffff;
   border: 2px solid #009CCD;
+}
+
+.noFavorites {
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }

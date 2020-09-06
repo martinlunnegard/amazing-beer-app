@@ -12,6 +12,7 @@ function Results({ results }) {
   const indexOfLastItem = currentPage * itemsPerPage; 
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = beerList.slice(indexOfFirstItem, indexOfLastItem);
+  const totalItems = Object.keys(beerList).length;
   
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -19,14 +20,20 @@ function Results({ results }) {
   
   return (
     <div className={styles.searchResults}> 
-      { Object.keys(currentItems).map(key => 
-        <Beer beer={currentItems[key]} key={currentItems[key].id} />
-      )}  
-      <Pagination 
-        itemsPerPage={itemsPerPage} 
-        totalItems={Object.keys(beerList).length} 
-        paginate={paginate} 
-      />
+    
+      {currentItems.length >= 1 
+        ? Object.keys(currentItems).map(key => 
+          <Beer beer={currentItems[key]} key={currentItems[key].id} />
+        )
+        : <div className={styles.noResults}>No results, please try again</div>  
+      }  
+      
+      {totalItems > 5 && 
+        <Pagination 
+          itemsPerPage={itemsPerPage} 
+          totalItems={totalItems} 
+          paginate={paginate} 
+      />}
     </div>
   )
    

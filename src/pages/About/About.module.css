@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutHeader {
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 60px;
+}
+
+.aboutFlex {
+  display: flex; 
+}
+
+.aboutInnerFlex {
+  align-self: center;
+  width: 50%;
+  margin-right: 30px;
+}
+
+.aboutInfo,
+.aboutLink {
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  line-height: 32px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.profileImg {
+  height: 300px; 
+  width: 300px;
+  margin-bottom: 20px;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { favoritesActions } from  '../../redux/actions'
-import { faSkullCrossbones } from "@fortawesome/free-solid-svg-icons";
+import { faSkullCrossbones, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from './Favorites.module.css';
 
@@ -34,7 +34,7 @@ const Favorites = () => {
               <img className={styles.favoritesImg} src={data[key].image_url} alt={data[key].name} />
             </div>
           </div>  
-          <button className={styles.btn} onClick={() => removeItem(data[key])}>
+          <button className={styles.removeBtn} onClick={() => removeItem(data[key])}>
             <FontAwesomeIcon icon={faSkullCrossbones} />
           </button>
         </div>  
@@ -45,7 +45,11 @@ const Favorites = () => {
   return (
     <div>
       <h2 className={styles.favoritesHeader}>My Favorites:</h2>
-      { renderFavorites(favorites) }
+
+      {favorites.length >= 1 
+        ? renderFavorites(favorites) 
+        : <div className={styles.noFavorites}>No favorites! Tap the <FontAwesomeIcon icon={faHeart} /> icon to get started</div> 
+      }
     </div>
   );
 }
