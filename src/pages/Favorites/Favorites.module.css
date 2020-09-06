@@ -1,3 +1,11 @@
+.pageGrid {
+	max-width: 880px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+
 .favoritesHeader {
   font-family: 'Luckiest Guy', cursive;
 	letter-spacing: 0.05em;
@@ -8,6 +16,7 @@
 
 .favoritesRow {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
@@ -16,19 +25,22 @@
   margin-bottom: 20px; 
   margin-right: 60px;
   width: 100%; 
+  box-sizing: border-box;
   max-width: 100%;
 }
 
 .favoritesInnerRow {
   display: flex;
+  flex-direction: column;
   flex: 1;
   align-items: center;
   justify-content: space-between;
-  margin-right: 30px;
 }
 
 .favoritesNameAbv {
   display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .favoritesName {
@@ -36,9 +48,9 @@
   color: #009CCD;
   font-weight: bold;
   font-size: 44px; 
-  margin-right: 40px;
   display: flex;
   align-items: center;
+  justify-content: center;
   letter-spacing: 0.05em;
 }
 
@@ -47,11 +59,10 @@
   color: #000000;
   font-weight: bold;
   font-size: 32px;
-  margin-right: 40px;
+  justify-content: center;
   display: flex;
   flex: 1 1 100%;
   align-items: center;
-  justify-content: flex-end;
   letter-spacing: 0.05em;
 }
 
@@ -60,12 +71,10 @@
   color: #009CCD;
   font-size: 18px;
   line-height: 26px;
-  max-width: 90%;
 }
 
 .favoritesImgWrapper {
-  width: 100px; 
-  margin-right: 40px;
+  width: 100px;
   text-align: center;
 }
 
@@ -98,4 +107,27 @@
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
   font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .favoritesName {
+    margin-right: 40px;
+  }
+
+  .favoritesInnerRow {
+    margin-right: 30px;
+  }
+
+  .favoritesAbv {
+    margin-right: 30px;
+    justify-content: flex-end;
+  }
+
+  .favoritesBrewTips {
+    max-width: 90%;
+  } 
+
+  .favoritesImgWrapper {
+    margin-right: 40px;
+  }
 }

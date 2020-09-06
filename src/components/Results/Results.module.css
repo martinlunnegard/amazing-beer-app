@@ -1,3 +1,6 @@
+/* LOTS OF THIS IS USELESS CODE */
+
+
 .searchResults {
 	display: flex;
 	flex-wrap: wrap;
@@ -7,15 +10,18 @@
 
 .beerContainer {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-around;
 	flex: 1 1 100%;
 	background-color: #ffffff; 
+	background-color: hotpink; 
 	border-radius: 20px;
 	margin-bottom: 20px;
 	padding: 40px 20px;
 }
 
 .beerInfoContainer {
+	text-align: center;
 	flex: 0 0 60%;
 	align-self: center;
 }
@@ -81,5 +87,13 @@
   font-family: 'Raleway', sans-serif;
 	font-size: 18px;
 	font-weight: bold;
+}
+
+
+@media screen and (min-width: 768px) {
+	.beerContainer {
+		flex-direction: row;
+	}
+	
 }
 

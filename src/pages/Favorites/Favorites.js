@@ -43,7 +43,7 @@ const Favorites = () => {
   }
 
   return (
-    <div>
+    <div className={styles.pageGrid}>
       <h2 className={styles.favoritesHeader}>My Favorites:</h2>
 
       {favorites.length >= 1 

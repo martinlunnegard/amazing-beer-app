@@ -2,13 +2,26 @@
 	max-width: 880px;
 	width: 100%;
 	margin: 0 auto;
+	padding: 0 15px;
+	box-sizing: border-box;
 }
+
 
 .header {
 	font-family: 'Luckiest Guy', cursive;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	color: #ffffff;
-	font-size: 120px;
 	text-align: center;
+	padding-top: 12px;
+	font-size: 72px;
+}
+
+
+@media screen and (min-width: 768px) {
+	.header {
+		font-size: 120px;
+		text-align: center;
+	}
+	
 }
