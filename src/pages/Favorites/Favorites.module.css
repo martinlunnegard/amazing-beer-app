@@ -52,6 +52,7 @@
   align-items: center;
   justify-content: center;
   letter-spacing: 0.05em;
+  margin-bottom: 20px; 
 }
 
 .favoritesAbv {
@@ -64,6 +65,7 @@
   flex: 1 1 100%;
   align-items: center;
   letter-spacing: 0.05em;
+  margin-bottom: 20px; 
 }
 
 .favoritesBrewTips {
@@ -71,11 +73,13 @@
   color: #009CCD;
   font-size: 18px;
   line-height: 26px;
+  margin-bottom: 20px;
 }
 
 .favoritesImgWrapper {
   width: 100px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .favoritesImg {
@@ -110,17 +114,30 @@
 }
 
 @media screen and (min-width: 768px) {
+  .favoritesRow {
+    flex-direction: row;
+  }
+
+  .favoritesNameAbv {
+    text-align: left;
+    flex-direction: row;
+  }
+
   .favoritesName {
     margin-right: 40px;
+    justify-content: flex-start;
   }
 
   .favoritesInnerRow {
     margin-right: 30px;
+    flex-direction: row;
   }
 
   .favoritesAbv {
+    margin-bottom: 0;
     margin-right: 30px;
     justify-content: flex-end;
+    
   }
 
   .favoritesBrewTips {
@@ -129,5 +146,6 @@
 
   .favoritesImgWrapper {
     margin-right: 40px;
+    margin-bottom: 0;
   }
 }
