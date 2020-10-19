@@ -7,10 +7,9 @@ import Loader from '../../components/Loader/Loader';
 import API_URL from '../../utils/apiUrl';
 import styles from './Home.module.css'
 
-const Home = props => {
+const Home = () => {
   const results = useSelector(state => state.results.list);
   const dispatch = useDispatch();
-  const [errors, setErrors] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
   
@@ -26,13 +25,6 @@ const Home = props => {
     fetchData();
   }, [dispatch]);
   
-  // TODOS
-
-  // DESIGNA KNAPPAR / INPUTFÄLT
-  // ABOUT
-  // MOBIL 
-  // ANIMATIONER
-
 
  const handleSearch = async (searchTerm) => {
     setIsLoaded(false);

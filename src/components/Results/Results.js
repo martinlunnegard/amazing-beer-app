@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Beer from './components/Beer/Beer';
 import Pagination from './components/Pagination/Pagination';
 import styles from './Results.module.css'; 

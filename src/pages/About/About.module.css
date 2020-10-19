@@ -1,6 +1,23 @@
 .container {
   display: flex;
   flex-direction: column;
+  padding: 0px 15px;
+}
+
+.header {
+  font-size: 120px;
+  text-align: center;
+}
+
+.aboutFlex {
+  display: flex; 
+  flex-direction: column;
+}
+
+.aboutInnerFlex {
+  margin-right: 0; 
+  margin-bottom: 30px;
+  width: auto;
 }
 
 .aboutHeader {
@@ -9,16 +26,6 @@
   text-transform: uppercase;
   color: #ffffff;
   font-size: 60px;
-}
-
-.aboutFlex {
-  display: flex; 
-}
-
-.aboutInnerFlex {
-  align-self: center;
-  width: 50%;
-  margin-right: 30px;
 }
 
 .aboutInfo,
@@ -35,4 +42,17 @@
   height: 300px; 
   width: 300px;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .aboutInnerFlex {
+    align-self: center;
+    width: 50%;
+    margin-right: 30px;
+  }
+
+  .aboutFlex {
+    flex-direction: row;
+  }
+	
 }
