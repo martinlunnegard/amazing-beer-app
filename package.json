@@ -8,6 +8,7 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "axios": "^0.19.2",
     "immutability-helper": "^3.1.1",
+    "netlify-cli": "^2.65.6",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-redux": "^7.2.1",
